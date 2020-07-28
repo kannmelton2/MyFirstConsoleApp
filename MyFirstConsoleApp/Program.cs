@@ -64,6 +64,62 @@ namespace MyFirstConsoleApp
             names[3] = "Anca";
 
             Console.WriteLine(greeting);
+
+            if (!string.IsNullOrEmpty(name))
+            {
+                Console.WriteLine($"{name} was in the name variable");
+                return;
+            }
+
+            switch (oneCharacter)
+            {
+                case 'a':
+                case 'b':
+                    Console.WriteLine("it's the letter a");
+                    break;
+                case 'c':
+                    Console.WriteLine("Duh it's c");
+                    break;
+                default:
+                    Console.WriteLine("It wasn't a or c");
+                    break;
+            }
+
+            for (int i = 0; i < names.Length; i++)
+            {
+                if (i < 3)
+                {
+                    continue;
+                }
+                Console.WriteLine($"The current name is {names[i]}");
+            }
+
+            foreach (var n in names)
+            {
+                Console.WriteLine($"The current name is {n}");
+            }
+
+            while (true)
+            {
+                if (DateTime.Now > new DateTime(2020, 7, 27, 19, 23, 30))
+                {
+                    break;
+                }
+            }
+
+            Console.WriteLine("Please enter your name.");
+            var input = Console.ReadLine();
+            Console.WriteLine($"Hello, {input}");
+
+            Console.WriteLine("Please enter a comma separated list of numbers.");
+            input = Console.ReadLine();
+
+            var numbers = input.Split(',');
+
+            foreach (var number in numbers)
+            {
+                Console.WriteLine(number);
+            }
         }
     }
 }
