@@ -65,10 +65,16 @@ namespace MyFirstConsoleApp
 
             Console.WriteLine(greeting);
 
+            var shouldExecute = true;
+
+            if (shouldExecute)
+            {
+                 
+            }
+
             if (!string.IsNullOrEmpty(name))
             {
                 Console.WriteLine($"{name} was in the name variable");
-                return;
             }
 
             switch (oneCharacter)
